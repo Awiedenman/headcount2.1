@@ -1,7 +1,7 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-describe('DistrictRepository iteration 1 - part 1', () =>  {
+describe.skip('DistrictRepository iteration 1 - part 1', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findByName returns undefined if no arguments are provided', () => {
@@ -13,7 +13,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   });
 
   test('findByName returns an object with its individual district information', () => {
-
+    console.log(district.findByName('Colorado'))
     expect(typeof district.findByName('Colorado')).toEqual('object');
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
@@ -40,7 +40,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   test('district data is sanitized and defaults to 0', () => {
     const academy = district.findByName('ARICKAREE R-2');
     const result = {"2004": 1, "2005": 0, "2006": 0.125, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1}
-
+    console.log(academy);
     expect(academy.stats).toEqual(result)
   });
 
