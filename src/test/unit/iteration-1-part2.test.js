@@ -1,7 +1,7 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-describe.skip('DistrictRepository iteration 1 - part 2', () =>  {
+describe('DistrictRepository iteration 1 - part 2', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findAllMatches defaults to returning all data in an array', () => {
@@ -9,6 +9,7 @@ describe.skip('DistrictRepository iteration 1 - part 2', () =>  {
   });
 
   test('findAllMatches returns matches in an array, case insensitive', () => {
+    console.log(district.findAllMatches('colorado'))
     expect(district.findAllMatches('ColoRado').length).toBe(2);
   });
 
