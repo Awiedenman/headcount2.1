@@ -1,7 +1,7 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-describe.skip('DistrictRepository iteration 0', () =>  {
+describe('DistrictRepository iteration 0', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('district has data in an object', () => {

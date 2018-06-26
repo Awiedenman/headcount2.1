@@ -17,6 +17,9 @@ export default class DistrictRepository {
   }
 
   findByName(location) {
+    if(!location) {
+      return undefined
+    }
     const cleanedLocation = location.toUpperCase();
     const foundName = Object.keys(this.stats).reduce((locationObj, district) => {
       if(district.toUpperCase() === cleanedLocation) {
@@ -29,7 +32,9 @@ export default class DistrictRepository {
       }
       return locationObj
     }, {})
-
+    if(!foundName.location) {
+      return undefined;
+    }
     return foundName
   }
 
