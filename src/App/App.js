@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { CardContainer } from '../CardContainer/CardContainer';
 
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
           {/* <SearchForm /> */}
           {/* <ClickedContainer /> */}
         </header>
-        {/* <CardContainer /> */}
+        <CardContainer />
       </div>
     );
   }
