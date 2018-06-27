@@ -3,24 +3,23 @@ import { Card } from '../Card/Card';
 import PropTypes from 'prop-types';
 
 export const CardContainer = ( { allDistricts } ) => {
-  
-  const createCards = Object.keys(allDistricts).map(( district, index ) => {
-    return (
-      <Card 
-        allDistricts = { allDistricts }
-        key={ index }
-      />
-    );
-  });
-
+  console.log(allDistricts)
+  const createCards = allDistricts.map( (district, index)  => {
+    return (<Card
+            key={index}
+            location={district.location}
+            stats={district.stats}
+          />
+    )
+  })
   return (
     <div>
       {createCards}
     </div>
   );
-};
+}
 
 CardContainer.propTypes = {
-  allDistricts: PropTypes.object
+  allDistricts: PropTypes.array
 };
 
