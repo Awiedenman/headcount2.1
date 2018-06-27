@@ -8,13 +8,12 @@ class App extends Component {
   constructor( props ){
     super( props );
     this.state = {
-      allDistricts: {}
+      allDistricts: []
     };
   }
   setDistrictData=() => {
     const allDistricts = new DistrictRepository( kinderData );
-    // console.log(allDistricts)
-    this.setState({ allDistricts });
+    this.setState({allDistricts: [...allDistricts] });
     
   }
 
