@@ -12,16 +12,13 @@ export default class DistrictRepository {
       }
       return cleanedData;
     }, {});
-    // console.log(Object.keys(cleanedData))
     const districtList = Object.keys(cleanedData).map(district => {
-      // console.log(cleanedData[district])
       return {location: district,
               stats: cleanedData[district].reduce((stats, year) => {
                 stats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
                 return stats
               }, {})
       }});
-      console.log(districtList);
     return districtList
   }
 

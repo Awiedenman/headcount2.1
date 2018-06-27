@@ -8,18 +8,19 @@ class App extends Component {
   constructor( props ){
     super( props );
     this.state = {
-      allDistricts: []
+      allDistricts: this.setDistrictData()
     };
   }
   setDistrictData=() => {
     const allDistricts = new DistrictRepository( kinderData );
-    this.setState({allDistricts: [...allDistricts] });
+    // this.setState({ allDistricts: allDistricts.stats });
+    return allDistricts.stats
     
   }
 
-  componentDidMount() {
-    this.setDistrictData();
-  }
+  // componentDidMount() {
+  //   this.setDistrictData();
+  // }
   
   render() {
     return (
