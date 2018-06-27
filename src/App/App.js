@@ -11,10 +11,13 @@ class App extends Component {
       allDistricts: {}
     };
   }
+  
 
   componentDidMount() {
     const allDistricts = new DistrictRepository( kinderData );
+    // console.log(allDistricts)
     this.setState({ allDistricts });
+    
   }
   
   render() {
