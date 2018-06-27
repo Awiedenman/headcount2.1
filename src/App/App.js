@@ -11,13 +11,15 @@ class App extends Component {
       allDistricts: {}
     };
   }
-  
-
-  componentDidMount() {
+  setDistrictData=() => {
     const allDistricts = new DistrictRepository( kinderData );
     // console.log(allDistricts)
     this.setState({ allDistricts });
     
+  }
+
+  componentDidMount() {
+    this.setDistrictData();
   }
   
   render() {
@@ -28,7 +30,8 @@ class App extends Component {
           {/* <SearchForm /> */}
           {/* <ClickedContainer /> */}
         </header>
-        <CardContainer />
+        <CardContainer 
+          allDistricts={ this.state.allDistricts }/>
       </div>
     );
   }
