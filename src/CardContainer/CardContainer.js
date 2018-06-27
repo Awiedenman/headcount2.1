@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 export const CardContainer = ( { allDistricts } ) => {
   
-  const createCards = Object.keys(allDistricts).map(( district, index) => {
+  const createCards = Object.keys(allDistricts).map(( district, index ) => {
     return (
       <Card 
-        title={ allDistricts[district].title } 
+        allDistricts = { allDistricts }
         key={ index }
       />
     );
@@ -18,5 +18,9 @@ export const CardContainer = ( { allDistricts } ) => {
       {createCards}
     </div>
   );
+};
+
+CardContainer.propTypes = {
+  allDistricts: PropTypes.object
 };
 
