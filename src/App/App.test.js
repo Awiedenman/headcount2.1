@@ -16,7 +16,7 @@ describe('App', () => {
     const wrapper = shallow(
       <App />, { disableLifecycleMethods: true });
 
-    expect(wrapper.state().allDistricts).toEqual({});
+    expect(wrapper.state().allDistricts).toEqual([]);
   });
 
   // describe( 'setDistrictData', () => {
