@@ -60,7 +60,7 @@ export default class DistrictRepository {
   }
 
   findAverage(districtName){
-    const sanitizedData = districtName.toUpperCase()
+    const sanitizedData = districtName.toUpperCase();
     const foundMatch = this.stats.find( district => {
       return district.location === sanitizedData;
     });
@@ -71,9 +71,11 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages(location1, location2) {
-    const average1 = this.findAverage( location1 );
-    const average2 = this.findAverage(location2);
-    const comparedAverage = {[location1]: average1, [location2]: average2, compared: Math.round(average1 / average2 * 1000) / 1000}
+    const sanitizedLocation1 = location1.toUpperCase();
+    const sanitizedLocation2 = location2.toUpperCase();
+    const average1 = this.findAverage( sanitizedLocation1 );
+    const average2 = this.findAverage( sanitizedLocation2 );
+    const comparedAverage = {[sanitizedLocation1]: average1, [sanitizedLocation2]: average2, compared: Math.round(average1 / average2 * 1000) / 1000 };
     return comparedAverage;   
   }
 }
