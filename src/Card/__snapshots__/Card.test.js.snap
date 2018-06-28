@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches a Snapshot of the Card 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    location="Colorado"
+    stats={
+        Object {
+            "location": "Colorado",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Colorado
+</h1>,
+        Array [
+          <p>
+            location
+             : 
+            Colorado
+</p>,
+          <p>
+            stats
+             : 
+            Object {
+                        "2004": 0.24,
+                        "2005": 0.278,
+                        "2006": 0.337,
+                        "2007": 0.395,
+                      }
+</p>,
+        ],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Colorado",
+        },
+        "ref": null,
+        "rendered": "Colorado",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "location",
+            " : ",
+            "Colorado",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "location",
+          " : ",
+          "Colorado",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "stats",
+            " : ",
+            Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "stats",
+          " : ",
+          Object {
+            "2004": 0.24,
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+          },
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Colorado
+</h1>,
+          Array [
+            <p>
+              location
+               : 
+              Colorado
+</p>,
+            <p>
+              stats
+               : 
+              Object {
+                            "2004": 0.24,
+                            "2005": 0.278,
+                            "2006": 0.337,
+                            "2007": 0.395,
+                          }
+</p>,
+          ],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Colorado",
+          },
+          "ref": null,
+          "rendered": "Colorado",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "location",
+              " : ",
+              "Colorado",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "location",
+            " : ",
+            "Colorado",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "stats",
+              " : ",
+              Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "stats",
+            " : ",
+            Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
