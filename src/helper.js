@@ -69,6 +69,14 @@ export default class DistrictRepository {
     }, 0)/ Object.keys(foundMatch.stats).length; 
     return Math.round(districtStatsAverage * 1000) / 1000;
   }
+
+  compareDistrictAverages(location1, location2) {
+    const average1 = this.findAverage( location1 );
+    const average2 = this.findAverage(location2);
+    const comparedAverage = {[location1]: average1, [location2]: average2, compared: Math.round(average1 / average2 * 1000) / 1000}
+    return comparedAverage;   
+  }
 }
+
 
 
