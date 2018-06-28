@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { CardContainer } from '../CardContainer/CardContainer';
+import { SearchForm } from '../SearchForm/SearchForm';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
 import { SearchForm } from '../SearchForm/SearchForm';
@@ -33,6 +34,7 @@ class App extends Component {
           <SearchForm 
             showSearchResults={ this.showSearchResults }
           />
+
           {/* <ClickedContainer /> */}
         </header>
         <CardContainer 

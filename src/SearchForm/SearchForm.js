@@ -1,3 +1,4 @@
+
 import React, {
   Component
 } from 'react';
@@ -16,8 +17,6 @@ export class SearchForm extends Component {
   //   });
   // }
 
-  
-
   render() {
     return ( 
       <form className = "search" >
@@ -29,5 +28,6 @@ export class SearchForm extends Component {
             this.props.showSearchResults(event.target.value);
           }}
         /> </form>);
+
   }
 }
