@@ -4,7 +4,6 @@ import { CardContainer } from '../CardContainer/CardContainer';
 import { SearchForm } from '../SearchForm/SearchForm';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
-import { SearchForm } from '../SearchForm/SearchForm';
 class App extends Component {
   constructor( props ){
     super( props );
