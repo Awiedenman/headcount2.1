@@ -14,12 +14,13 @@ export default class DistrictRepository {
     }, {});
     const districtList = Object.keys(cleanedData).map(district => {
       return {location: district,
-              stats: cleanedData[district].reduce((stats, year) => {
-                stats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
-                return stats
-              }, {})
-      }});
-    return districtList
+        stats: cleanedData[district].reduce((stats, year) => {
+          stats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
+          return stats;
+        }, {})
+      };
+    });
+    return districtList;
   }
 
   findByName(location) {
@@ -27,12 +28,12 @@ export default class DistrictRepository {
       return undefined;
     }
     const cleanedLocation = location.toUpperCase();
-    const foundName = Object.keys(this.stats).reduce((locationObj, district) => {
-      if (district.toUpperCase() === cleanedLocation) {
-        locationObj.location = district.toUpperCase();
-        locationObj.stats = this.stats[district].reduce((statsObj, year) => {
-          const roundedData = Math.round(year.Data * 1000)/1000;
-          statsObj[year.TimeFrame] = roundedData || 0;
+    const foundName = this.stats.reduce((locationObj, district) => {
+      if (district.location.toUpperCase() === cleanedLocation) {
+        locationObj.location = district.location.toUpperCase();
+        locationObj.stats =Object.keys(district.stats).reduce((statsObj, year) => {
+          const roundedData = Math.round(district.stats[year] * 1000)/1000;
+          statsObj[year] = roundedData || 0;
           return statsObj;
         }, {});
       }

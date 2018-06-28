@@ -2,7 +2,8 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
-import * as helper from '../helper';
+import kinderData from '../data/kindergartners_in_full_day_program';
+import DistrictRepository from '../helper';
 
 
 it('renders without crashing', () => {
@@ -16,28 +17,18 @@ describe('App', () => {
     const wrapper = shallow(
       <App />, { disableLifecycleMethods: true });
 
-    expect(wrapper.state().allDistricts).toEqual({});
+    expect(wrapper.state().allDistricts).toEqual([]);
   });
 
   // describe( 'setDistrictData', () => {
 
-  //   it('should setState of allDistricts after pageload', () => {
-  //     const mockData = {stats: { 
-  //       'ACADEMY 20': [
-  //         {Location: "ACADEMY 20", TimeFrame: 2007, DataFormat: "Percent", Data: 0.39159},
-  //         {Location: "ACADEMY 20", TimeFrame: 2006, DataFormat: "Percent", Data: 0.35364},
-  //         {Location: "ACADEMY 20", TimeFrame: 2005, DataFormat: "Percent", Data: 0.26709}
-  //       ] }};
-    
-  //     const wrapper = shallow(
-  //       <App 
-  //         allDistricts={ mockData }
-  //       />, { disableLifecycleMethods: true });
+  it('should setState of allDistricts after pageload', () => {
+    // const mockData = {location: 'Colorado', stats : {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395}};
+    const mockHelper = new DistrictRepository(kinderData);
+    const wrapper = shallow(<App />);
 
-  //     helper.
-  //     wrapper.instance().setDistrictData(); 
+    wrapper.instance(); 
     
-  //     expect(wrapper.instance().state().allDistricts).toEqual(mockData);
-  //   });
-  // });
+    expect(wrapper.instance().state.allDistricts).toEqual(mockHelper.stats);
+  });
 });
