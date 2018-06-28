@@ -3,19 +3,22 @@ import './App.css';
 import { CardContainer } from '../CardContainer/CardContainer';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
-
+import { SearchForm } from '../SearchForm/SearchForm';
 class App extends Component {
   constructor( props ){
     super( props );
+    this.districtRepository = new DistrictRepository( kinderData ),
     this.state = {
       allDistricts: []
     };
   }
   setDistrictData=() => {
-    const allDistricts = new DistrictRepository( kinderData );
-    this.setState({ allDistricts: allDistricts.stats });
-    return allDistricts.stats;
-    
+    this.setState({ allDistricts: this.districtRepository.stats });    
+  }
+  
+  showSearchResults = (searchInput) => {
+    const foundMatches = this.districtRepository.findAllMatches(searchInput);
+    this.setState({ allDistricts: foundMatches });
   }
 
   componentDidMount() {
@@ -27,7 +30,9 @@ class App extends Component {
       <div>
         <header>
           <h1>Headcount 2.0</h1>
-          {/* <SearchForm /> */}
+          <SearchForm 
+            showSearchResults={ this.showSearchResults }
+          />
           {/* <ClickedContainer /> */}
         </header>
         <CardContainer 

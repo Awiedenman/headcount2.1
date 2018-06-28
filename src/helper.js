@@ -51,15 +51,13 @@ export default class DistrictRepository {
 
   findAllMatches(location) {
     if (!location) {
-      return Object.keys(this.stats);
+      return this.stats;
     }
-    const foundDistricts = Object.keys(this.stats).filter(district => {
-      return district.toUpperCase().includes(location.toUpperCase());
+    const foundDistricts = this.stats.filter(district => {
+      return district.location.toUpperCase().includes(location.toUpperCase());
     });
     return foundDistricts;
   }
-
-
 }
 
 
