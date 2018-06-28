@@ -1,22 +1,26 @@
+
 export default class DistrictRepository {
-  constructor (schoolData) {
-    this.stats = this.stopDuplicates(schoolData);
+  constructor ( schoolData ) {
+    this.stats = this.stopDuplicates( schoolData );
   }
 
-  stopDuplicates(schoolData) {
-    const cleanedData = schoolData.reduce((cleanedData, dataItem) => {
-      if (!cleanedData[dataItem.Location]) {
-        cleanedData[dataItem.Location] = [dataItem];
+  stopDuplicates( schoolData ) {
+    const sanitizedData = schoolData.reduce(( sanitizedData, dataItem ) => {
+      if (!sanitizedData[dataItem.Location]) {
+        // console.log(dataItem)
+        sanitizedData[dataItem.Location] = [dataItem];
       } else {
-        cleanedData[dataItem.Location].push(dataItem);
+        sanitizedData[dataItem.Location].push(dataItem);
       }
-      return cleanedData;
+      // console.log(sanitizedData);
+      return sanitizedData;
     }, {});
-    const districtList = Object.keys(cleanedData).map(district => {
-      return {location: district,
-        stats: cleanedData[district].reduce((stats, year) => {
-          stats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
-          return stats;
+    const districtList = Object.keys(sanitizedData).map(districtLocation => {
+      return {location: districtLocation,
+        stats: sanitizedData[districtLocation].reduce((districtStats, year) => {
+          districtStats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
+          // console.log(districtStats)
+          return districtStats;
         }, {})
       };
     });
@@ -27,9 +31,9 @@ export default class DistrictRepository {
     if (!location) {
       return undefined;
     }
-    const cleanedLocation = location.toUpperCase();
+    const sanitizedLocation = location.toUpperCase();
     const foundName = this.stats.reduce((locationObj, district) => {
-      if (district.location.toUpperCase() === cleanedLocation) {
+      if (district.location.toUpperCase() === sanitizedLocation) {
         locationObj.location = district.location.toUpperCase();
         locationObj.stats =Object.keys(district.stats).reduce((statsObj, year) => {
           const roundedData = Math.round(district.stats[year] * 1000)/1000;
