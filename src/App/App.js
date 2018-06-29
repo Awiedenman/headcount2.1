@@ -22,16 +22,29 @@ class App extends Component {
   }
 
   addClickedCard = (location) => {
-    const allDistrictsWithClickedCard = this.state.allDistricts.map(district => {
-      if (district.location === location) {
+    const allDistrictsWithClickedCard = this.state.allDistricts.map((district, index, array) => {
+      if (district.location === location && !district.clicked && this.limitClicked(array) < 2) {
         district.clicked = true;
+      } else if ( district.location === location && district.clicked) {
+        district.clicked = false;
       }
       return district;
     });
-
+    console.log(allDistrictsWithClickedCard);
     this.setState({
       allDistricts: allDistrictsWithClickedCard
     });
+  }
+
+  limitClicked = (allDistricts) => {
+    const limit = allDistricts.reduce(( totalClicks, district ) => {
+      if ( district.clicked) {
+        totalClicks += 1;
+      }
+      return totalClicks;
+    }, 0);
+    console.log(limit)
+    return limit; 
   }
 
   componentDidMount() {

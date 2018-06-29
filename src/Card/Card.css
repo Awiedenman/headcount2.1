@@ -28,3 +28,7 @@ p {
 .over {
   color: purple;
 }
+
+.clicked {
+  border: magenta 5px solid;
+}
