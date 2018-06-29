@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../Card/Card';
 import PropTypes from 'prop-types';
+import './ClickedContainer.css';
 
 export const ClickedContainer = ( { allDistricts, addClickedCard }) => {
   const renderClickedCards = allDistricts.filter(( district ) => {

@@ -1,0 +1,10 @@
+.clicked-container {
+  display: flex;
+  justify-content: center;
+  height: 340px;
+}
+
+.clicked-container div {
+  /* display: inline-block; */
+
+}
