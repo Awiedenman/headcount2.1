@@ -1,33 +1,22 @@
 
-import React, {
-  Component
-} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import './SearchForm.css';
 
-export class SearchForm extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   searchInput: ''
-    // };
-  }
+export const SearchForm = ({ showSearchResults }) => {
 
-  // handleChange = (e) => {
-  //   this.setState({
-  //     searchInput: e.target.value
-  //   });
-  // }
+  return ( 
+    <form className = "search" >
+      <input type = "text"
+        name = "search"
+        placeholder = "search for area"
+        onChange = { (event) =>{
+          showSearchResults(event.target.value);
+        }}
+      /> 
+    </form>);
+};
 
-  render() {
-    return ( 
-      <form className = "search" >
-        <input type = "text"
-          name = "search"
-          placeholder = "search for area"
-          onChange = { (event) =>{
-            // this.handleChange()
-            this.props.showSearchResults(event.target.value);
-          }}
-        /> </form>);
-
-  }
-}
+SearchForm.propTypes = {
+  showSearchResults: PropTypes.func.isRequired
+};

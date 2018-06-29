@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 export const Card = ( {location, stats} ) => {
   const districtStats = Object.keys(stats).map((year, index) => {
@@ -8,7 +9,7 @@ export const Card = ( {location, stats} ) => {
     );
   });
   return (
-    <div>
+    <div className="card">
       <h1>{location}</h1>
       { districtStats }
     </div>

@@ -1,11 +1,11 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-describe.skip('DistrictRepository iteration 0', () =>  {
+describe('DistrictRepository iteration 0', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findAverage for ACADEMY 20', () => {
-    expect(district.findAverage('ACADEMY 20')).toBe(.407)
+    expect(district.findAverage('ACADEMY 20')).toBe(.407);
   });
 
   test('compareDistrictAverages ACADEMY 20 against YUMA SCHOOL DISTRICT 1', () => {
@@ -19,7 +19,7 @@ describe.skip('DistrictRepository iteration 0', () =>  {
   });
 
   test('compareDistrictAverages ACADEMY 20 against Colorado', () => {
-    const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768}
+    const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768 };
     expect(district.compareDistrictAverages('ACADEMY 20', 'Colorado')).toEqual(result);
   });
 
