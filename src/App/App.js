@@ -21,6 +21,19 @@ class App extends Component {
     this.setState({ allDistricts: foundMatches });
   }
 
+  addClickedCard = (location) => {
+    const allDistrictsWithClickedCard = this.state.allDistricts.map(district => {
+      if (district.location === location) {
+        district.clicked = true;
+      }
+      return district;
+    });
+
+    this.setState({
+      allDistricts: allDistrictsWithClickedCard
+    });
+  }
+
   componentDidMount() {
     this.setDistrictData();
   }
@@ -37,7 +50,9 @@ class App extends Component {
           {/* <ClickedContainer /> */}
         </header>
         <CardContainer 
-          allDistricts={ this.state.allDistricts }/>
+          allDistricts={ this.state.allDistricts }
+          addClickedCard={ this.addClickedCard }
+        />
       </div>
     );
   }
