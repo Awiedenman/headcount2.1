@@ -5,7 +5,7 @@ import './Card.css';
 export const Card = ( {location, stats} ) => {
   const districtStats = Object.keys(stats).map((year, index) => {
     return (
-      <p key={ index }>{ year } : { stats[year] }</p>
+      <p className={stats[year] < .5 ? 'under' : 'over'} key={ index }>{ year } : { stats[year] }</p>
     );
   });
   return (
