@@ -62,7 +62,7 @@ export default class DistrictRepository {
   findAverage(districtName){
     const sanitizedData = districtName.toUpperCase();
     const foundMatch = this.stats.find( district => {
-      return district.location === sanitizedData;
+      return district.location.toUpperCase() === sanitizedData;
     });
     const districtStatsAverage = Object.keys(foundMatch.stats).reduce(( sum, yearData) => {
       return sum += foundMatch.stats[yearData];

@@ -38,7 +38,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   test('district data is sanitized and defaults to 0', () => {
     const academy = district.findByName('ARICKAREE R-2');
     const result = {"2004": 1, "2005": 0, "2006": 0.125, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1}
-    console.log(academy);
     expect(academy.stats).toEqual(result)
   });
 
