@@ -35,12 +35,16 @@ ShallowWrapper {
           Colorado
 </h1>,
         Array [
-          <p>
+          <p
+            className="over"
+>
             location
              : 
             Colorado
 </p>,
-          <p>
+          <p
+            className="over"
+>
             stats
              : 
             Object {
@@ -52,6 +56,7 @@ ShallowWrapper {
 </p>,
         ],
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -76,6 +81,7 @@ ShallowWrapper {
             " : ",
             "Colorado",
           ],
+          "className": "over",
         },
         "ref": null,
         "rendered": Array [
@@ -100,6 +106,7 @@ ShallowWrapper {
               "2007": 0.395,
             },
           ],
+          "className": "over",
         },
         "ref": null,
         "rendered": Array [
@@ -128,12 +135,16 @@ ShallowWrapper {
             Colorado
 </h1>,
           Array [
-            <p>
+            <p
+              className="over"
+>
               location
                : 
               Colorado
 </p>,
-            <p>
+            <p
+              className="over"
+>
               stats
                : 
               Object {
@@ -145,6 +156,7 @@ ShallowWrapper {
 </p>,
           ],
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -169,6 +181,7 @@ ShallowWrapper {
               " : ",
               "Colorado",
             ],
+            "className": "over",
           },
           "ref": null,
           "rendered": Array [
@@ -193,6 +206,7 @@ ShallowWrapper {
                 "2007": 0.395,
               },
             ],
+            "className": "over",
           },
           "ref": null,
           "rendered": Array [
