@@ -4,6 +4,7 @@ import { CardContainer } from '../CardContainer/CardContainer';
 import { SearchForm } from '../SearchForm/SearchForm';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
+import { ClickedContainer } from '../ClickedContainer/ClickedContainer';
 class App extends Component {
   constructor( props ){
     super( props );
@@ -60,7 +61,10 @@ class App extends Component {
             showSearchResults={ this.showSearchResults }
           />
 
-          {/* <ClickedContainer /> */}
+          <ClickedContainer 
+            allDistricts={ this.state.allDistricts }
+            addClickedCard={ this.addClickedCard }
+          />
         </header>
         <CardContainer 
           allDistricts={ this.state.allDistricts }
