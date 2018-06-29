@@ -1,1 +1,9 @@
+header {
+  height: 200px;
+  border-bottom: 10px #000 double;
+  background-color: rgb(201, 198, 231);
+}
 
+h1 { 
+  margin: 20px;
+}
