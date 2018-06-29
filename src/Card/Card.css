@@ -8,6 +8,7 @@
   box-shadow: 5 5 5 5px;
   border: 1px #000 solid;
   box-shadow: 1px 1px 1px 1px;
+  background-color: lavenderblush
 }
 
 h1 {
@@ -18,4 +19,12 @@ h1 {
 p {
   font-size: 12px;
   margin: 1px
+}
+
+.under {
+  color: lightgreen;
+}
+
+.over {
+  color: purple;
 }
