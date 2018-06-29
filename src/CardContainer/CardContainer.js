@@ -11,6 +11,7 @@ export const CardContainer = ( { allDistricts, addClickedCard } ) => {
         location={district.location}
         stats={district.stats}
         addClickedCard={addClickedCard}
+        clicked={ district.clicked }
       />
     );
   });
