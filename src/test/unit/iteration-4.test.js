@@ -18,8 +18,8 @@ describe('DistrictRepository iteration 0', () =>  {
     expect(district.compareDistrictAverages('ACADeMY 20', 'YUMA ScHOoL DiStRICT 1')).toEqual(result);
   });
 
-  test.skip('compareDistrictAverages ACADEMY 20 against Colorado', () => {
-    const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768}
+  test('compareDistrictAverages ACADEMY 20 against Colorado', () => {
+    const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768 };
     expect(district.compareDistrictAverages('ACADEMY 20', 'Colorado')).toEqual(result);
   });
 

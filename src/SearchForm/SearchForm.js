@@ -1,6 +1,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import './SearchForm.css';
 
 export const SearchForm = ({ showSearchResults }) => {
 
