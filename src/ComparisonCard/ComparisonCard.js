@@ -1,5 +1,6 @@
 import React from 'react';
 import './ComparisonCard.css';
+import PropTypes from 'prop-types';
 
 export const ComparisonCard = ({ renderClickedCards, compareDistrictAverages, findAverage }) => {
   let location1;
@@ -15,4 +16,10 @@ export const ComparisonCard = ({ renderClickedCards, compareDistrictAverages, fi
       <h2>{renderClickedCards.length > 1 ? location2 + ":" + findAverage(location2) : ''}</h2>
     </div>
   )
+}
+
+ComparisonCard.propTypes = {
+  renderClickedCards: PropTypes.func,
+  compareDistrictAverages: PropTypes.func,
+  findAverage: PropTypes.func
 }

@@ -3,7 +3,7 @@ import { Card } from './Card';
 import { shallow, mount } from 'enzyme';
 
 describe('Card', () => {
-  
+
     const mockData = {location: 'Colorado', stats : {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395}};
 
   it('matches a Snapshot of the Card', () => {
@@ -46,7 +46,7 @@ describe('Card', () => {
         clicked={false}
         />);
     console.log(wrapper.find('.over'))
-    expect(wrapper.find('.over').render()).toEqual('2004: 0.789');
+    expect(wrapper.find('.over').text()).toEqual('2004: 0.789');
 
   })
 

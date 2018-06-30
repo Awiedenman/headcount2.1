@@ -14,6 +14,7 @@ class App extends Component {
       allDistricts: []
     };
   }
+
   setDistrictData=() => {
     this.setState({ allDistricts: this.districtRepository.stats });    
   }
@@ -45,10 +46,6 @@ class App extends Component {
       return totalClicks;
     }, 0);
     return limit; 
-  }
-
-  comparedCardInfo = (district) => {
-
   }
 
   componentDidMount() {
