@@ -25,4 +25,14 @@ describe('Comparison Card', () => {
     console.log(wrapper.find("h2").length)
     expect(wrapper.find('h2').length).toBeGreaterThan(1);
   })
+  // it('should not render comparison if renderClickedCards length is not greater than 1', () => {
+  //    const districtRepo = new DistrictRepository(kinderData)
+  //   mockRenderClickedCards = [ {location: 'Academy 20', stats: { 2003: .564, 2011: .999 } }]
+  //   const wrapper = shallow(<ComparisonCard
+  //                           renderClickedCards={ mockRenderClickedCards }
+  //                           compareDistrictAverages={ districtRepo.compareDistrictAverages }
+  //                           />);
+  //   console.log(wrapper.find("h2").length)
+  //   expect(wrapper.find('h2').length).toEqual(0);
+  // })
 })
