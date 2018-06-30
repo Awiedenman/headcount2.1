@@ -68,6 +68,7 @@ class App extends Component {
             allDistricts={ this.state.allDistricts }
             addClickedCard={ this.addClickedCard }
             compareDistrictAverages={ this.districtRepository.compareDistrictAverages}
+            findAverage={this.districtRepository.findAverage}
           />
         </header>
         <CardContainer 

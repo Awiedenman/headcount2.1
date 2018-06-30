@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './ClickedContainer.css';
 import { ComparisonCard } from '../ComparisonCard/ComparisonCard';
 
-export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistrictAverages }) => {
+export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistrictAverages, findAverage }) => {
   
   const renderClickedCards = allDistricts.filter(( district ) => {
     return district.clicked;
@@ -28,6 +28,7 @@ export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistric
       <ComparisonCard 
         renderClickedCards={ renderClickedCards }
         compareDistrictAverages={ compareDistrictAverages }
+        findAverage={findAverage}
       />
       { compareCards }
     </div>
