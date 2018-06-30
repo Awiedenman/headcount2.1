@@ -18,7 +18,7 @@ export default class DistrictRepository {
     const districtList = Object.keys(sanitizedData).map(districtLocation => {
       return {location: districtLocation,
         stats: sanitizedData[districtLocation].reduce((districtStats, year) => {
-          districtStats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
+          districtStats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000 || 0;
           // console.log(districtStats)
           return districtStats;
         }, {})

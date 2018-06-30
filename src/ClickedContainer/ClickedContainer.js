@@ -9,7 +9,6 @@ export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistric
   const renderClickedCards = allDistricts.filter(( district ) => {
     return district.clicked;
   });
-  console.log(renderClickedCards)
   
   const compareCards = renderClickedCards.map(( clickedDistrict, index) => {
     return ( 

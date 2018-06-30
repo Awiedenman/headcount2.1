@@ -44,7 +44,6 @@ class App extends Component {
       }
       return totalClicks;
     }, 0);
-    console.log(limit)
     return limit; 
   }
 
