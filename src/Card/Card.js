@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
-import classnames from 'classnames';
 
 export const Card = ( {location, stats, addClickedCard, clicked } ) => {
   const districtStats = Object.keys(stats).map((year, index) => {
