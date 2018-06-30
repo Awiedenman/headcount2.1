@@ -18,7 +18,7 @@ export default class DistrictRepository {
     const districtList = Object.keys(sanitizedData).map(districtLocation => {
       return {location: districtLocation,
         stats: sanitizedData[districtLocation].reduce((districtStats, year) => {
-          districtStats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000;
+          districtStats[year.TimeFrame] = Math.round(year.Data * 1000) / 1000 || 0;
           // console.log(districtStats)
           return districtStats;
         }, {})
@@ -59,7 +59,7 @@ export default class DistrictRepository {
     return foundDistricts;
   }
 
-  findAverage(districtName){
+  findAverage = (districtName) => {
     const sanitizedData = districtName.toUpperCase();
     const foundMatch = this.stats.find( district => {
       return district.location.toUpperCase() === sanitizedData;
@@ -70,7 +70,7 @@ export default class DistrictRepository {
     return Math.round(districtStatsAverage * 1000) / 1000;
   }
 
-  compareDistrictAverages(location1, location2) {
+  compareDistrictAverages = (location1, location2) => {
     const sanitizedLocation1 = location1.toUpperCase();
     const sanitizedLocation2 = location2.toUpperCase();
     const average1 = this.findAverage( sanitizedLocation1 );

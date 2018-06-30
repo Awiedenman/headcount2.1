@@ -16,9 +16,10 @@ h1 {
   text-align: center;
 }
 
-p {
+li {
   font-size: 12px;
-  margin: 1px
+  margin: 1px;
+  list-style-type: none;
 }
 
 .under {

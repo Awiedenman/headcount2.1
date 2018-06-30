@@ -32,7 +32,6 @@ class App extends Component {
       }
       return district;
     });
-    console.log(allDistrictsWithClickedCard);
     this.setState({
       allDistricts: allDistrictsWithClickedCard
     });
@@ -45,7 +44,6 @@ class App extends Component {
       }
       return totalClicks;
     }, 0);
-    console.log(limit)
     return limit; 
   }
 
@@ -68,7 +66,8 @@ class App extends Component {
           <ClickedContainer 
             allDistricts={ this.state.allDistricts }
             addClickedCard={ this.addClickedCard }
-            compareDistrictAverages={ this.districtRepository.compareDistrictAverages }
+            compareDistrictAverages={ this.districtRepository.compareDistrictAverages}
+            findAverage={this.districtRepository.findAverage}
           />
         </header>
         <CardContainer 
