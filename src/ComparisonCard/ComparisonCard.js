@@ -1,13 +1,12 @@
 import React from 'react';
 import './ComparisonCard.css';
 
-export const ComparisonCard = ({ renderClickedCards, compareDistrictAverages, findAverage }) => {
+export const ComparisonCard = ({ renderClickedCards, compareDistrictAverages }) => {
   let location1;
   let location2;
   if(renderClickedCards.length > 1) {
     location1 = renderClickedCards[0].location;
     location2 = renderClickedCards[1].location;
-    console.log(compareDistrictAverages(location1, location2))   
   }
   return(
     <div>
