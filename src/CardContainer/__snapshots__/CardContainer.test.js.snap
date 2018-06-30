@@ -33,6 +33,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Unknown
+          addClickedCard={undefined}
+          clicked={undefined}
           location="Colorado"
           stats={
                     Object {
@@ -53,6 +55,8 @@ ShallowWrapper {
         "key": "0",
         "nodeType": "function",
         "props": Object {
+          "addClickedCard": undefined,
+          "clicked": undefined,
           "location": "Colorado",
           "stats": Object {
             "2004": 0.24,
@@ -76,6 +80,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Unknown
+            addClickedCard={undefined}
+            clicked={undefined}
             location="Colorado"
             stats={
                         Object {
@@ -96,6 +102,8 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "function",
           "props": Object {
+            "addClickedCard": undefined,
+            "clicked": undefined,
             "location": "Colorado",
             "stats": Object {
               "2004": 0.24,

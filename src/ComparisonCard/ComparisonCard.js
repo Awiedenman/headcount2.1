@@ -1,18 +1,25 @@
 import React from 'react';
 import './ComparisonCard.css';
+import PropTypes from 'prop-types';
 
 export const ComparisonCard = ({ renderClickedCards, compareDistrictAverages, findAverage }) => {
-  let location1;
-  let location2;
+  
   if(renderClickedCards.length > 1) {
-    location1 = renderClickedCards[0].location;
-    location2 = renderClickedCards[1].location;
+    const comparedDistrictsObj = compareDistrictAverages(renderClickedCards[0].location, renderClickedCards[1].location)
+    return(
+      <div>
+        <h2 className="compare-location1">{ renderClickedCards[0].location + ":" + comparedDistrictsObj[renderClickedCards[0].location.toUpperCase()] }</h2>
+        <h2>{comparedDistrictsObj.compared}</h2>
+        <h2>{ renderClickedCards[1].location + ":" + comparedDistrictsObj[renderClickedCards[1].location.toUpperCase()] }</h2>
+      </div>
+    )   
+  } else {
+    return <div></div>
   }
-  return(
-    <div>
-      <h2>{renderClickedCards.length > 1 ? location1 + ":" + findAverage(location1) : ''}</h2>
-      <p>{renderClickedCards.length > 1 ? compareDistrictAverages(location1, location2).compared : ''}</p>
-      <h2>{renderClickedCards.length > 1 ? location2 + ":" + findAverage(location2) : ''}</h2>
-    </div>
-  )
+}
+
+ComparisonCard.propTypes = {
+  renderClickedCards: PropTypes.array,
+  compareDistrictAverages: PropTypes.func,
+  findAverage: PropTypes.func
 }

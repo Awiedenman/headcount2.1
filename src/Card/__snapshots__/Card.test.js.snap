@@ -34,29 +34,30 @@ ShallowWrapper {
         <h1>
           Colorado
 </h1>,
-        Array [
-          <p
-            className="over"
->
-            location
-             : 
-            Colorado
-</p>,
-          <p
-            className="over"
->
-            stats
-             : 
-            Object {
-                        "2004": 0.24,
-                        "2005": 0.278,
-                        "2006": 0.337,
-                        "2007": 0.395,
-                      }
-</p>,
-        ],
+        <ul>
+          <li
+                    className="over"
+          >
+                    location
+                     : 
+                    Colorado
+          </li>
+          <li
+                    className="over"
+          >
+                    stats
+                     : 
+                    Object {
+                              "2004": 0.24,
+                              "2005": 0.278,
+                              "2006": 0.337,
+                              "2007": 0.395,
+                            }
+          </li>
+</ul>,
       ],
-      "className": "card",
+      "className": "card ",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -73,53 +74,85 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0",
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "location",
-            " : ",
-            "Colorado",
+            <li
+              className="over"
+>
+              location
+               : 
+              Colorado
+</li>,
+            <li
+              className="over"
+>
+              stats
+               : 
+              Object {
+                            "2004": 0.24,
+                            "2005": 0.278,
+                            "2006": 0.337,
+                            "2007": 0.395,
+                          }
+</li>,
           ],
-          "className": "over",
         },
         "ref": null,
         "rendered": Array [
-          "location",
-          " : ",
-          "Colorado",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "stats",
-            " : ",
-            Object {
-              "2004": 0.24,
-              "2005": 0.278,
-              "2006": 0.337,
-              "2007": 0.395,
-            },
-          ],
-          "className": "over",
-        },
-        "ref": null,
-        "rendered": Array [
-          "stats",
-          " : ",
           Object {
-            "2004": 0.24,
-            "2005": 0.278,
-            "2006": 0.337,
-            "2007": 0.395,
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "location",
+                " : ",
+                "Colorado",
+              ],
+              "className": "over",
+            },
+            "ref": null,
+            "rendered": Array [
+              "location",
+              " : ",
+              "Colorado",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "stats",
+                " : ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              ],
+              "className": "over",
+            },
+            "ref": null,
+            "rendered": Array [
+              "stats",
+              " : ",
+              Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+              },
+            ],
+            "type": "li",
           },
         ],
-        "type": "p",
+        "type": "ul",
       },
     ],
     "type": "div",
@@ -134,29 +167,30 @@ ShallowWrapper {
           <h1>
             Colorado
 </h1>,
-          Array [
-            <p
-              className="over"
->
-              location
-               : 
-              Colorado
-</p>,
-            <p
-              className="over"
->
-              stats
-               : 
-              Object {
-                            "2004": 0.24,
-                            "2005": 0.278,
-                            "2006": 0.337,
-                            "2007": 0.395,
-                          }
-</p>,
-          ],
+          <ul>
+            <li
+                        className="over"
+            >
+                        location
+                         : 
+                        Colorado
+            </li>
+            <li
+                        className="over"
+            >
+                        stats
+                         : 
+                        Object {
+                                    "2004": 0.24,
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  }
+            </li>
+</ul>,
         ],
-        "className": "card",
+        "className": "card ",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -173,53 +207,85 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0",
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "location",
-              " : ",
-              "Colorado",
+              <li
+                className="over"
+>
+                location
+                 : 
+                Colorado
+</li>,
+              <li
+                className="over"
+>
+                stats
+                 : 
+                Object {
+                                "2004": 0.24,
+                                "2005": 0.278,
+                                "2006": 0.337,
+                                "2007": 0.395,
+                              }
+</li>,
             ],
-            "className": "over",
           },
           "ref": null,
           "rendered": Array [
-            "location",
-            " : ",
-            "Colorado",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "stats",
-              " : ",
-              Object {
-                "2004": 0.24,
-                "2005": 0.278,
-                "2006": 0.337,
-                "2007": 0.395,
-              },
-            ],
-            "className": "over",
-          },
-          "ref": null,
-          "rendered": Array [
-            "stats",
-            " : ",
             Object {
-              "2004": 0.24,
-              "2005": 0.278,
-              "2006": 0.337,
-              "2007": 0.395,
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "location",
+                  " : ",
+                  "Colorado",
+                ],
+                "className": "over",
+              },
+              "ref": null,
+              "rendered": Array [
+                "location",
+                " : ",
+                "Colorado",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "stats",
+                  " : ",
+                  Object {
+                    "2004": 0.24,
+                    "2005": 0.278,
+                    "2006": 0.337,
+                    "2007": 0.395,
+                  },
+                ],
+                "className": "over",
+              },
+              "ref": null,
+              "rendered": Array [
+                "stats",
+                " : ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              ],
+              "type": "li",
             },
           ],
-          "type": "p",
+          "type": "ul",
         },
       ],
       "type": "div",
