@@ -32,5 +32,17 @@ describe('Card', () => {
       />);
     expect(wrapper.is('.clicked')).toEqual(false);
   })
+  it('should call addClickedCard method when card is clicked', () => {
+    const mockAddClickedCard = jest.fn();
+    const wrapper = shallow(<Card
+        key={1}
+        location={'Colorado'}
+        stats={ mockData }
+        clicked={false}
+        addClickedCard={mockAddClickedCard}
+      />);
+    wrapper.simulate('click');
+    expect(mockAddClickedCard).toBeCalled();
+  })
 
 });
