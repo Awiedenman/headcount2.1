@@ -2,11 +2,15 @@ import React from 'react';
 import { Card } from '../Card/Card';
 import PropTypes from 'prop-types';
 import './ClickedContainer.css';
+import { ComparisonCard } from '../ComparisonCard/ComparisonCard';
 
-export const ClickedContainer = ( { allDistricts, addClickedCard }) => {
+export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistrictAverages }) => {
+  
   const renderClickedCards = allDistricts.filter(( district ) => {
     return district.clicked;
-  }).map(( clickedDistrict, index) => {
+  });
+  
+  const compareCards = renderClickedCards.map(( clickedDistrict, index) => {
     return ( 
       <Card 
         key={index}
@@ -20,12 +24,17 @@ export const ClickedContainer = ( { allDistricts, addClickedCard }) => {
 
   return (
     <div className='clicked-container'>
-      { renderClickedCards }
+      <ComparisonCard 
+        renderClickedCards={ renderClickedCards }
+        compareDistrictAverages={ compareDistrictAverages }
+      />
+      { compareCards }
     </div>
   );
 };
 
 ClickedContainer.propTypes = {
   allDistricts: PropTypes.array,
-  addClickedCard: PropTypes.func
+  addClickedCard: PropTypes.func,
+  compareDistrictAverages: PropTypes.func
 };

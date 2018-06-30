@@ -49,6 +49,10 @@ class App extends Component {
     return limit; 
   }
 
+  comparedCardInfo = (district) => {
+
+  }
+
   componentDidMount() {
     this.setDistrictData();
   }
@@ -64,6 +68,7 @@ class App extends Component {
           <ClickedContainer 
             allDistricts={ this.state.allDistricts }
             addClickedCard={ this.addClickedCard }
+            compareDistrictAverages={ this.districtRepository.compareDistrictAverages }
           />
         </header>
         <CardContainer 
