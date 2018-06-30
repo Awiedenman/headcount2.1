@@ -37,5 +37,6 @@ export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistric
 ClickedContainer.propTypes = {
   allDistricts: PropTypes.array,
   addClickedCard: PropTypes.func,
+  findAverage: PropTypes.func,
   compareDistrictAverages: PropTypes.func
 };
