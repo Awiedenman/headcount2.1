@@ -42,12 +42,11 @@ describe('Card', () => {
     const wrapper = shallow(<Card
       key={1}
       location={'Colorado'}
-      stats={ mockData1 }
+      stats={ mockData1.stats }
       clicked={false}
     />);
   
-    console.log(wrapper.debug());
-    // expect(wrapper.find('.over')[0].text()).toEqual('2004: 0.789');
+    expect(wrapper.find('.over').text()).toEqual(' 2004 : 0.789');
 
   });
 
