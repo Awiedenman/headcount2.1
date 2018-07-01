@@ -31,11 +31,19 @@ describe('ClickedContainer', ()=> {
   });
 
   it('should render 1 card component into  the container if 1 card is clicked', () => {
-
+    const wrapper = shallow(
+      <ClickedContainer
+        clickedCard1={ { location: 'Colorado' } }
+      />
+    );
+    expect(wrapper.find('.clicked').length).toEqual(1);
   });
 
   it('should not render any cards to the container if no cards are clicked', () => {
-
+    const wrapper = shallow(
+      <ClickedContainer />
+    );
+    expect(wrapper.find('.clicked').length).toEqual(0);
   });
 
 
