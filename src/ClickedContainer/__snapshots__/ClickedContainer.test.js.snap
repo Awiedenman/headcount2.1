@@ -23,17 +23,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        undefined,
         <Unknown
           clickedCards={Array []}
           compareDistrictAverages={[Function]}
           findAverage={[Function]}
 />,
-        Array [],
+        undefined,
       ],
       "className": "clicked-container",
     },
     "ref": null,
     "rendered": Array [
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -47,6 +49,7 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      undefined,
     ],
     "type": "div",
   },
@@ -57,17 +60,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <Unknown
             clickedCards={Array []}
             compareDistrictAverages={[Function]}
             findAverage={[Function]}
 />,
-          Array [],
+          undefined,
         ],
         "className": "clicked-container",
       },
       "ref": null,
       "rendered": Array [
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
@@ -81,6 +86,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        undefined,
       ],
       "type": "div",
     },

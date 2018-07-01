@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 
 export const ComparisonCard = ({ clickedCards, compareDistrictAverages, findAverage }) => {
   
-  if(clickedCards.length > 1) {
-    const comparedDistrictsObj = compareDistrictAverages(clickedCards[0].location, clickedCards[1].location)
+  if (clickedCards.length > 1) {
+    const comparedDistrictsObj = compareDistrictAverages(clickedCards[0].location, clickedCards[1].location);
+
     return(
       <div>
         <h2 className="compare-location1">{ clickedCards[0].location + ":" + comparedDistrictsObj[clickedCards[0].location.toUpperCase()] }</h2>

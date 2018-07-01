@@ -14,7 +14,7 @@ describe('SearchForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call showSearchResults with an event.target.value as an argument', () => {
+  it('should call showSearchResults on change', () => {
     const mockShowSearch = jest.fn();
     const mockEvent = { target : { value : 'input' }};
     const wrapper = shallow(
