@@ -7,13 +7,13 @@ export const ComparisonCard = ({ clickedCards, compareDistrictAverages, findAver
   if (clickedCards.length > 1) {
     const comparedDistrictsObj = compareDistrictAverages(clickedCards[0].location, clickedCards[1].location);
 
-    return(
-      <div>
+    return (
+      <div className='card clicked comparison-card'>
         <h2 className="compare-location1">{ clickedCards[0].location + ":" + comparedDistrictsObj[clickedCards[0].location.toUpperCase()] }</h2>
-        <h2>{comparedDistrictsObj.compared}</h2>
+        <h2>{`<------ ${comparedDistrictsObj.compared} ------>`}</h2>
         <h2>{ clickedCards[1].location + ":" + comparedDistrictsObj[clickedCards[1].location.toUpperCase()] }</h2>
       </div>
-    )   
+    );   
   } else {
     return <div></div>
   }

@@ -38,21 +38,14 @@ ShallowWrapper {
           <li
                     className="over"
           >
-                    location
-                     : 
-                    Colorado
+                     
+                    location : Colorado
           </li>
           <li
                     className="over"
           >
-                    stats
-                     : 
-                    Object {
-                              "2004": 0.24,
-                              "2005": 0.278,
-                              "2006": 0.337,
-                              "2007": 0.395,
-                            }
+                     
+                    stats : [object Object]
           </li>
 </ul>,
       ],
@@ -81,21 +74,14 @@ ShallowWrapper {
             <li
               className="over"
 >
-              location
-               : 
-              Colorado
+               
+              location : Colorado
 </li>,
             <li
               className="over"
 >
-              stats
-               : 
-              Object {
-                            "2004": 0.24,
-                            "2005": 0.278,
-                            "2006": 0.337,
-                            "2007": 0.395,
-                          }
+               
+              stats : [object Object]
 </li>,
           ],
         },
@@ -107,17 +93,15 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "location",
-                " : ",
-                "Colorado",
+                " ",
+                "location : Colorado",
               ],
               "className": "over",
             },
             "ref": null,
             "rendered": Array [
-              "location",
-              " : ",
-              "Colorado",
+              " ",
+              "location : Colorado",
             ],
             "type": "li",
           },
@@ -127,27 +111,15 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "stats",
-                " : ",
-                Object {
-                  "2004": 0.24,
-                  "2005": 0.278,
-                  "2006": 0.337,
-                  "2007": 0.395,
-                },
+                " ",
+                "stats : [object Object]",
               ],
               "className": "over",
             },
             "ref": null,
             "rendered": Array [
-              "stats",
-              " : ",
-              Object {
-                "2004": 0.24,
-                "2005": 0.278,
-                "2006": 0.337,
-                "2007": 0.395,
-              },
+              " ",
+              "stats : [object Object]",
             ],
             "type": "li",
           },
@@ -171,21 +143,14 @@ ShallowWrapper {
             <li
                         className="over"
             >
-                        location
-                         : 
-                        Colorado
+                         
+                        location : Colorado
             </li>
             <li
                         className="over"
             >
-                        stats
-                         : 
-                        Object {
-                                    "2004": 0.24,
-                                    "2005": 0.278,
-                                    "2006": 0.337,
-                                    "2007": 0.395,
-                                  }
+                         
+                        stats : [object Object]
             </li>
 </ul>,
         ],
@@ -214,21 +179,14 @@ ShallowWrapper {
               <li
                 className="over"
 >
-                location
-                 : 
-                Colorado
+                 
+                location : Colorado
 </li>,
               <li
                 className="over"
 >
-                stats
-                 : 
-                Object {
-                                "2004": 0.24,
-                                "2005": 0.278,
-                                "2006": 0.337,
-                                "2007": 0.395,
-                              }
+                 
+                stats : [object Object]
 </li>,
             ],
           },
@@ -240,17 +198,15 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "location",
-                  " : ",
-                  "Colorado",
+                  " ",
+                  "location : Colorado",
                 ],
                 "className": "over",
               },
               "ref": null,
               "rendered": Array [
-                "location",
-                " : ",
-                "Colorado",
+                " ",
+                "location : Colorado",
               ],
               "type": "li",
             },
@@ -260,27 +216,15 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "stats",
-                  " : ",
-                  Object {
-                    "2004": 0.24,
-                    "2005": 0.278,
-                    "2006": 0.337,
-                    "2007": 0.395,
-                  },
+                  " ",
+                  "stats : [object Object]",
                 ],
                 "className": "over",
               },
               "ref": null,
               "rendered": Array [
-                "stats",
-                " : ",
-                Object {
-                  "2004": 0.24,
-                  "2005": 0.278,
-                  "2006": 0.337,
-                  "2007": 0.395,
-                },
+                " ",
+                "stats : [object Object]",
               ],
               "type": "li",
             },
