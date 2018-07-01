@@ -15,7 +15,7 @@ class App extends Component {
     };
   }
 
-  setDistrictData=() => {
+  setDistrictData = () => {
     this.setState({ allDistricts: this.districtRepository.stats });    
   };
   
@@ -26,7 +26,7 @@ class App extends Component {
 
   addClickedCard = (location) => {
     const allDistrictsWithClickedCard = this.state.allDistricts.map((district, index, array) => {
-      if (district.location === location && !district.clicked && this.limitClicked(array) < 2) {
+      if (district.location === location && !district.clicked && this.districtRepository.limitClicked(array) < 2) {
         district.clicked = true;
       } else if ( district.location === location && district.clicked) {
         district.clicked = false;
@@ -38,21 +38,15 @@ class App extends Component {
     });
   };
 
-  limitClicked = (allDistricts) => {
-    const limit = allDistricts.reduce(( totalClicks, district ) => {
-      if ( district.clicked) {
-        totalClicks += 1;
-      }
-      return totalClicks;
-    }, 0);
-    return limit; 
-  }
-
   componentDidMount() {
     this.setDistrictData();
   }
   
   render() {
+    //place filter here
+    const clickedCards = this.state.allDistricts.filter(( district ) => {
+      return district.clicked;
+    });
     return (
       <div>
         <header>
@@ -61,7 +55,8 @@ class App extends Component {
             showSearchResults={ this.showSearchResults }
           />
           <ClickedContainer 
-            allDistricts={ this.state.allDistricts }
+            clickedCard1={ clickedCards[0] }
+            clickedCard2={ clickedCards[1] }
             addClickedCard={ this.addClickedCard }
             compareDistrictAverages={ this.districtRepository.compareDistrictAverages}
             findAverage={this.districtRepository.findAverage}

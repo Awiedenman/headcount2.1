@@ -24,9 +24,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Unknown
+          clickedCards={Array []}
           compareDistrictAverages={[Function]}
           findAverage={[Function]}
-          renderClickedCards={Array []}
 />,
         Array [],
       ],
@@ -39,9 +39,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "clickedCards": Array [],
           "compareDistrictAverages": [Function],
           "findAverage": [Function],
-          "renderClickedCards": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -58,9 +58,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Unknown
+            clickedCards={Array []}
             compareDistrictAverages={[Function]}
             findAverage={[Function]}
-            renderClickedCards={Array []}
 />,
           Array [],
         ],
@@ -73,9 +73,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "clickedCards": Array [],
             "compareDistrictAverages": [Function],
             "findAverage": [Function],
-            "renderClickedCards": Array [],
           },
           "ref": null,
           "rendered": null,

@@ -27,6 +27,16 @@ export default class DistrictRepository {
     return districtList;
   }
 
+  limitClicked = (allDistricts) => {
+    const limit = allDistricts.reduce(( totalClicks, district ) => {
+      if ( district.clicked) {
+        totalClicks += 1;
+      }
+      return totalClicks;
+    }, 0);
+    return limit; 
+  }
+
   findByName(location) {
     if (!location) {
       return undefined;

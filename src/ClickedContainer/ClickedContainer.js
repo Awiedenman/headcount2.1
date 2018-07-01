@@ -4,13 +4,22 @@ import PropTypes from 'prop-types';
 import './ClickedContainer.css';
 import { ComparisonCard } from '../ComparisonCard/ComparisonCard';
 
-export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistrictAverages, findAverage }) => {
-  
-  const renderClickedCards = allDistricts.filter(( district ) => {
-    return district.clicked;
-  });
-  
-  const compareCards = renderClickedCards.map(( clickedDistrict, index) => {
+export const ClickedContainer = ( { clickedCard1, clickedCard2, addClickedCard, compareDistrictAverages, findAverage }) => {
+  //remove filter part and just pass in two districts to component
+  // const renderClickedCards = allDistricts.filter(( district ) => {
+  //   return district.clicked;
+  // });
+  let clickedCards;
+  if(clickedCard1 && clickedCard2) {
+    clickedCards = [clickedCard1, clickedCard2]
+  } else if(clickedCard1) {
+    clickedCards = [clickedCard1]
+  } else if(clickedCard2) {
+    clickedCards = [clickedCard2]
+  } else {
+    clickedCards = [];
+  }
+  const compareCards = clickedCards.map(( clickedDistrict, index) => {
     return ( 
       <Card 
         key={index}
@@ -25,7 +34,7 @@ export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistric
   return (
     <div className='clicked-container'>
       <ComparisonCard 
-        renderClickedCards={ renderClickedCards }
+        clickedCards={ clickedCards }
         compareDistrictAverages={ compareDistrictAverages }
         findAverage={findAverage}
       />
@@ -35,7 +44,7 @@ export const ClickedContainer = ( { allDistricts, addClickedCard, compareDistric
 };
 
 ClickedContainer.propTypes = {
-  allDistricts: PropTypes.array,
+  // allDistricts: PropTypes.array,
   addClickedCard: PropTypes.func,
   findAverage: PropTypes.func,
   compareDistrictAverages: PropTypes.func

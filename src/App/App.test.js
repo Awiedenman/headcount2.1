@@ -13,15 +13,14 @@ it('renders without crashing', () => {
 
 describe('App', () => {
 
-  it('should have and intial state of an empty object', () => {
+  it('should have and intial state of an empty array', () => {
     const wrapper = shallow(
       <App />, { disableLifecycleMethods: true });
 
     expect(wrapper.state().allDistricts).toEqual([]);
   });
 
-  describe( 'setDistrictData', () => {
-
+  describe( 'componentDidMount', () => {
     it('should setState of allDistricts after pageload', () => {
     // const mockData = {location: 'Colorado', stats : {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395}};
       const mockHelper = new DistrictRepository(kinderData);
@@ -35,47 +34,49 @@ describe('App', () => {
 
   describe('showSearchResults', () => {
 
-    it.skip('should call findAllMatches', () => {
-      const mockFindAllMatches = jest.fn();
-      const mockSearchInput = 'ACADEMY 20';
-      const wrapper = shallow( <App/> );
+    // it.skip('should call findAllMatches', () => {
+    //   const mockSearchInput = 'ACADEMY 20';
+    //   const wrapper = shallow( <App/> );
 
-      wrapper.instance().showSearchResults(mockSearchInput);
+    //   wrapper.instance().showSearchResults(mockSearchInput);
 
-      expect(mockFindAllMatches).toHaveBeenCalledWith(mockSearchInput);
-    });
+    //   expect(mockFindAllMatches).toHaveBeenCalledWith(mockSearchInput);
+    // });
 
-    it.skip('should call showSearchResults with the search input as an argument', () => {
-      const mockFindAllMatches = jest.fn();
-      const mockSearchInput = 'ACADEMY 20';
-      const wrapper = shallow( <App/> );
+    // it.skip('should call showSearchResults with the search input as an argument', () => {
+    //   const mockFindAllMatches = jest.fn();
+    //   const mockSearchInput = 'ACADEMY 20';
+    //   const wrapper = shallow( <App/> );
 
-      wrapper.instance().showSearchResults(mockSearchInput);
-      mockFindAllMatches.mockImplementation();
+    //   wrapper.instance().showSearchResults(mockSearchInput);
+    //   mockFindAllMatches.mockImplementation();
 
-      expect(mockFindAllMatches).toHaveBeenCalledWith(mockSearchInput);
-    });
+    //   expect(mockFindAllMatches).toHaveBeenCalledWith(mockSearchInput);
+    // });
   
-    it.skip('should setState to include only district locations that match the user input', () => {
-      const mockSearchInput = 'Colorado';
+    it('should setState to include only district locations that match the user input', () => {
+      const searchInput = 'Colorado';
       const wrapper = shallow(<App/>)
 
       expect(wrapper.state().allDistricts.length).toEqual(181);
       
-      wrapper.instance().showSearchResults(mockSearchInput);
-      expect(wrapper.state().allDistricts.length).toEqual(2);
+      wrapper.instance().showSearchResults(searchInput);
+      expect(wrapper.state().allDistricts.map(district => district.location.toUpperCase()))
+      .toEqual(['COLORADO', 'COLORADO SPRINGS 11']);
     });
   });
 
   describe('addClickedCard', () => {
-    it.skip('is called with the correct argument of location', () => {
-      const mockLocation = 'Colorado';
+    it('should return an array that contains one card object with a truthy property clicked', () => {
       const wrapper = shallow(<App />);
-
-      wrapper.instance().addClickedCard(mockLocation);
-
-      expect(wrapper.addClickedCard).toHaveBeenCalledWith(mockLocation);
-    });
+      //test initial state of no clicked cards in componentdidMount section
+      wrapper.instance().addClickedCard('Colorado');
+      const clickedArray = wrapper.state().allDistricts.filter(district => district.clicked)
+      expect(clickedArray.length).toEqual(1);
+      expect(clickedArray[0].location.toUpperCase()).toEqual('COLORADO');
+      //should have test for unclicking card and for clicking a second card
+      //should have test for not allowing a third card to be clicked
+    })
 
     it.skip('should start off with a property of clicked = false', () => {
       // const mockLocation = 'Colorado';
