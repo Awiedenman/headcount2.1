@@ -10,12 +10,12 @@ export const ClickedContainer = ( { clickedCard1, clickedCard2, addClickedCard, 
   //   return district.clicked;
   // });
   let clickedCards;
-  if(clickedCard1 && clickedCard2) {
-    clickedCards = [clickedCard1, clickedCard2]
-  } else if(clickedCard1) {
-    clickedCards = [clickedCard1]
-  } else if(clickedCard2) {
-    clickedCards = [clickedCard2]
+  if (clickedCard1 && clickedCard2) {
+    clickedCards = [clickedCard1, clickedCard2];
+  } else if (clickedCard1) {
+    clickedCards = [clickedCard1];
+  } else if (clickedCard2) {
+    clickedCards = [clickedCard2];
   } else {
     clickedCards = [];
   }
@@ -33,12 +33,13 @@ export const ClickedContainer = ( { clickedCard1, clickedCard2, addClickedCard, 
 
   return (
     <div className='clicked-container'>
+      { compareCards[0] }
       <ComparisonCard 
         clickedCards={ clickedCards }
         compareDistrictAverages={ compareDistrictAverages }
         findAverage={findAverage}
       />
-      { compareCards }
+      { compareCards[1] }
     </div>
   );
 };
