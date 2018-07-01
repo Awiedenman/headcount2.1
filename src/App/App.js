@@ -17,12 +17,12 @@ class App extends Component {
 
   setDistrictData=() => {
     this.setState({ allDistricts: this.districtRepository.stats });    
-  }
+  };
   
   showSearchResults = (searchInput) => {
     const foundMatches = this.districtRepository.findAllMatches(searchInput);
     this.setState({ allDistricts: foundMatches });
-  }
+  };
 
   addClickedCard = (location) => {
     const allDistrictsWithClickedCard = this.state.allDistricts.map((district, index, array) => {
@@ -36,7 +36,7 @@ class App extends Component {
     this.setState({
       allDistricts: allDistrictsWithClickedCard
     });
-  }
+  };
 
   limitClicked = (allDistricts) => {
     const limit = allDistricts.reduce(( totalClicks, district ) => {
