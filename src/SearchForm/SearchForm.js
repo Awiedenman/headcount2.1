@@ -18,5 +18,5 @@ export const SearchForm = ({ showSearchResults }) => {
 };
 
 SearchForm.propTypes = {
-  showSearchResults: PropTypes.func.isRequired
+  showSearchResults: PropTypes.func
 };
