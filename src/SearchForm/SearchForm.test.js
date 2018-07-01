@@ -15,13 +15,15 @@ describe('SearchForm', () => {
   });
 
   it('should call showSearchResults with an event.target.value as an argument', () => {
-    const mockEvent = { event: { target : { value : 'input' }}};
-    const wrapper = mount(<SearchForm 
+    const mockShowSearch = jest.fn();
+    const mockEvent = { target : { value : 'input' }};
+    const wrapper = shallow(
+      <SearchForm 
+        showSearchResults={ mockShowSearch }
       />);
-      const spyChange = spyOn(wrapper.instance(), 'showSearchResults');
 
-    wrapper.instance().simulate('change', 'mockEvent');
+    wrapper.find('input').simulate('change', mockEvent);
 
-    expect(spyChange).toHaveBeenCalled(); 
+    expect(mockShowSearch).toHaveBeenCalled(); 
   });
 });
