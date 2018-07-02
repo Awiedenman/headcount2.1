@@ -5,4 +5,6 @@
 
 input {
   width: 300px;
+  padding: 2%;
+  font-size: 1em;
 }
