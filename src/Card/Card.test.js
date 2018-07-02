@@ -3,9 +3,10 @@ import { Card } from './Card';
 import { shallow, mount } from 'enzyme';
 
 describe('Card', () => {
-
-  const mockData = {location: 'Colorado', stats : {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395}};
-
+  const mockData = {
+    location: 'Colorado', stats : {
+      2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395}};
+      
   it('matches a Snapshot of the Card', () => {
     const wrapper = shallow(
       <Card
@@ -24,21 +25,26 @@ describe('Card', () => {
       stats={ mockData }
       clicked={true}
     />);
+
     expect(wrapper.is('.clicked')).toEqual(true);
   });
 
-  it('should not have a classname of "clicked" if prop clicked is false', () => {
+  it('has a classname of "clicked" if prop clicked is false', () => {
     const wrapper = shallow(<Card
       key={1}
       location={'Colorado'}
       stats={ mockData }
       clicked={false}
     />);
+
     expect(wrapper.is('.clicked')).toEqual(false);
   });
 
-  it('li in Card should have a classname of over if value is greater than .5', () => {
-    const mockData1 = {location: 'Colorado', stats : {2004: 0.789, 2005: 0.342, 2006: 0.111, 2007: 0.395}};
+  it('li in Card should have a classname of over if value is  > .5', () => {
+    const mockData1 = {
+      location: 'Colorado', stats : {
+        2004: 0.789, 2005: 0.342, 2006: 0.111, 2007: 0.395}};
+
     const wrapper = shallow(<Card
       key={1}
       location={'Colorado'}
@@ -59,8 +65,10 @@ describe('Card', () => {
       clicked={false}
       addClickedCard={mockAddClickedCard}
     />);
+
     wrapper.simulate('click');
+
     expect(mockAddClickedCard).toBeCalled();
-  })
+  });
 
 });
