@@ -9,7 +9,7 @@ import { ClickedContainer } from '../ClickedContainer/ClickedContainer';
 class App extends Component {
   constructor( props ){
     super( props );
-    this.districtRepository = new DistrictRepository( kinderData ),
+    this.districtRepository = new DistrictRepository( kinderData );
     this.state = {
       allDistricts: []
     };
@@ -59,7 +59,7 @@ class App extends Component {
             clickedCard2={ clickedCards[1] }
             addClickedCard={ this.addClickedCard }
             compareDistrictAverages={ this.districtRepository.compareDistrictAverages}
-            findAverage={this.districtRepository.findAverage}
+            // findAverage={this.districtRepository.findAverage}
           />
         </header>
         <CardContainer 

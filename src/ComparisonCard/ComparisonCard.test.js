@@ -20,7 +20,7 @@ describe('Comparison Card', () => {
   it('should render comparison if ClickedCards length is greater than 1', () => {
     const districtRepo = new DistrictRepository(kinderData);
     
-    mockClickedCards = [ { 
+    mockClickedCards = [{ 
       location: 'AGATE 300', stats: { 
         1945: .005, 1970: .804 } }, 
     { location: 'Academy 20', stats: { 

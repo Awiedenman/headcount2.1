@@ -34,6 +34,5 @@ export const ComparisonCard = ({
 
 ComparisonCard.propTypes = {
   clickedCards: PropTypes.array,
-  compareDistrictAverages: PropTypes.func,
-  findAverage: PropTypes.func
+  compareDistrictAverages: PropTypes.func
 };

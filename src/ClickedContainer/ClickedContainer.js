@@ -8,8 +8,7 @@ export const ClickedContainer = ( {
   clickedCard1, 
   clickedCard2, 
   addClickedCard, 
-  compareDistrictAverages, 
-  findAverage }) => {
+  compareDistrictAverages }) => {
 
   let clickedCards;
   if (clickedCard1 && clickedCard2) {
@@ -41,7 +40,6 @@ export const ClickedContainer = ( {
       <ComparisonCard 
         clickedCards={ clickedCards }
         compareDistrictAverages={ compareDistrictAverages }
-        findAverage={findAverage}
       />
       { compareCards[1] }
     </div>
