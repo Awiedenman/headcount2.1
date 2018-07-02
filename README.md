@@ -8,5 +8,5 @@ This project was built using a TDD workflow and is throughly tested using jest a
 
 This application was built using the `create-react-app` boilerplate.  
 
-<img src='https://github.com/airum82/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.25.58%20AM.png'/>
-
+<img src='https://github.com/airum82/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.25.58%20AM.png' />
+<img src='https://github.com/airum82/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.32.53%20AM.png' />
