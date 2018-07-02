@@ -3,9 +3,9 @@
   padding: 0;
 }
 header {
-  /* position: absolute;
-  top: 0;
-  width: 100%; */
+  position: fixed;  
+  z-index: 1;
+  width: 100%;
   border-bottom: 10px #000 double;
   background-color: rgb(201, 198, 231);
 }
@@ -14,7 +14,19 @@ header h1{
   font-size: 25px;
 }
 
-h1 { 
+.main-title {
+  font-size: 40px;
+}
+
+h1{   
   font-size: 15px;
   padding: 20px;
+  color: rgb(68, 69, 70)
+}
+
+h2 {
+  font-size: 22px;
+  padding: 10px;
+  color: rgb(68, 69, 70)
+
 }

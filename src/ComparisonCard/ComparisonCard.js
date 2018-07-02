@@ -21,7 +21,7 @@ export const ComparisonCard = ({
             clickedCards[0].location + ":" + 
             comparedDistrictsObj[clickedCards[0].location.toUpperCase()] }
         </h2>
-        <h2>{`<------ ${comparedDistrictsObj.compared} ------>`}</h2>
+        <h2>{`<---- ${comparedDistrictsObj.compared} ---->`}</h2>
         <h2>{ clickedCards[1].location + ":" + 
           comparedDistrictsObj[clickedCards[1].location.toUpperCase()] }
         </h2>

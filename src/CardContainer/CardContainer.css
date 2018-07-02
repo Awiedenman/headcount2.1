@@ -1,4 +1,7 @@
 .card-container {
+  position: absolute;
+  top: 506px;
+  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
