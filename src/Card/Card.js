@@ -12,7 +12,6 @@ export const Card = ( {location, stats, addClickedCard, clicked } ) => {
     );
   });
 
-
   return (
     <div 
       className={`card ${clicked ? 'clicked' : ''}`}  
