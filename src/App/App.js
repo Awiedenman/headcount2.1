@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <h1>Headcount 2.0</h1>
+          <h1 className='main-title'>Headcount 2.0</h1>
           <SearchForm 
             showSearchResults={ this.showSearchResults }
           />
