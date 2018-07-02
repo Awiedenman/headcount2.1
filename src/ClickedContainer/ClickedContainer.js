@@ -21,6 +21,7 @@ export const ClickedContainer = ( {
   } else {
     clickedCards = [];
   }
+  
   const compareCards = clickedCards.map(( clickedDistrict, index) => {
     return ( 
       <Card 
@@ -48,7 +49,6 @@ export const ClickedContainer = ( {
 };
 
 ClickedContainer.propTypes = {
-  // allDistricts: PropTypes.array,
   clickedCard1: PropTypes.object,
   clickedCard2: PropTypes.object,
   addClickedCard: PropTypes.func,

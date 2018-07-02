@@ -1,8 +1,9 @@
 import React from 'react';
 import { SearchForm } from './SearchForm';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('SearchForm', () => {
+
   const mockShowSearchResults = jest.fn();
 
   it('matches the snapshot of the SearchForm', () => {
