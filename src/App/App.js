@@ -43,7 +43,6 @@ class App extends Component {
   }
   
   render() {
-    //place filter here
     const clickedCards = this.state.allDistricts.filter(( district ) => {
       return district.clicked;
     });
@@ -59,7 +58,6 @@ class App extends Component {
             clickedCard2={ clickedCards[1] }
             addClickedCard={ this.addClickedCard }
             compareDistrictAverages={ this.districtRepository.compareDistrictAverages}
-            // findAverage={this.districtRepository.findAverage}
           />
         </header>
         <CardContainer 
