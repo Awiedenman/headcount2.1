@@ -1,12 +1,36 @@
-# HeadCount 2.0
+# HeadCount 2.1
 
-HeadCount 2.0 is a project designed to challenge your skills at manipulating data and creating small, reusable React components.  
+## About
+HeadCount is a 1 week project designed to work with and manipulate static data and to create and utilize small, reusable React components.  
 
 This project imports files containing various educational stats from districts within Colorado by year, per district. It allows you to search per district and compare their stat averages against each other. 
 
-This project was built using a TDD workflow and is throughly tested using jest and enzyme.
+## Technologies Used
+* React.js
+  - This application was built using the `create-react-app` boilerplate. 
+* CSS
+* Jest
+* Enzyme
 
-This application was built using the `create-react-app` boilerplate.  
 
-<img src='https://github.com/airum82/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.25.58%20AM.png' />
-<img src='https://github.com/airum82/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.32.53%20AM.png' />
+## Set-Up
+1. Clone down repo
+2. npm install
+
+## Testing
+
+Run with npm test from the associated root directory
+
+## ScreenShots
+![screenshot2](/screenshot1.png)
+
+![screenshot2](/screenshot2.png)
+
+## Original Project
+
+[Turing HeadCount Project Desciption](https://github.com/turingschool-examples/headcount2.0)
+
+## Contributors
+  Austin Wiedenman: [GitHub Profile](https://github.com/Awiedenman)
+
+  Arram Mandel: [GitHub Profile](https://github.com/airum82)
